@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blurry"
+    tools:context=".Boisson.BoissonActivity">
+
+
+    <EditText
+        android:id="@+id/boissonName"
+        android:layout_width="197dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Libelle Boisson"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/boissonType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.845"
+
+        />
+
+    <EditText
+        android:id="@+id/boissonType"
+        android:layout_width="197dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="96dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:hint="Type Boisson"
+        app:layout_constraintBottom_toTopOf="@+id/addBoisson"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/boissonPrice"
+        android:layout_width="197dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="number"
+
+        android:hint="Prix"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boissonType"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <ImageView
+        android:id="@+id/boissonImage"
+        android:layout_width="148dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toEndOf="@+id/boissonName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/addBoisson"
+        android:layout_width="66dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="56dp"
+
+        android:text="Add"
+        android:textColor="#FA470E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boissonImage"
+        app:layout_constraintVertical_bias="0.0"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="66dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="20dp"
+        android:text="Upload"
+        android:textColor="#FA470E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/addBoisson"
+        app:layout_constraintTop_toBottomOf="@+id/boissonImage"
+        app:layout_constraintVertical_bias="0.106"
+        android:background="@drawable/rounded_corner"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/boissons"
+        android:layout_width="335dp"
+        android:layout_height="332dp"
+        android:layout_marginTop="88dp"
+        android:orientation="vertical"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addBoisson"
+        app:layout_constraintVertical_bias="0.935"
+        tools:listitem="@layout/item_boisson" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
